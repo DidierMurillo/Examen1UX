@@ -50,6 +50,6 @@ end
 
   private
   def todo_params
-    params.require(:todo).permit(:level)
-  end
+    params.require(:todo).permit(:level,:description)
+  end 
 end

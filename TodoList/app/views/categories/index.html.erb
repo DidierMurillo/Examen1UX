@@ -1,5 +1,8 @@
 <h1>All my categories!</h1>
- 
+
+<div class="container-fluid">
+<div class="jumbotron"> 
+ <div class="row">
 <table>
   <tr>
     <th>Name</th>
@@ -21,7 +24,16 @@
       
     </tr>
   <% end %>
+  </div>
+  </div>
+  </div>
+
+  
 </table>
+<div class="container-fluid">
+<div class="jumbotron">
+ <div class="row">
+
 
 <table>
   <tr>
@@ -32,8 +44,8 @@
  
   <% @todos.each do |todo| %>
     <tr>
-      <td><%= todo.description %></td>
       <td><%= todo.id %></td>
+      <td><%= todo.description %></td>
       <td><%= todo.level %></td>
             
     </tr>
@@ -44,3 +56,6 @@
 <p> <%= link_to 'New Category', "http://localhost:3000/categories/new" %></p>
 <p> <%= link_to 'Back', "http://localhost:3000/categories" %></p>
 <p> <%= link_to 'New Todo',  "http://localhost:3000/todos/new" %></p>
+</div>
+</div>
+</div>
