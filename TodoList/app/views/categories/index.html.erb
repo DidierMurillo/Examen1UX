@@ -1,14 +1,18 @@
-<h1>Listing v</h1>
+<h1>All my categories!</h1>
  
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Update</th>
+    <th>Delete</th>
+    
   </tr>
  
   <% @categories.each do |category| %>
     <tr>
       <td><%= category.name %></td>
+      <td><%= category.id %></td>
       
       <td><%= link_to 'Edit', "http://localhost:3000/categories/edit" %></td>
       <td><%= link_to 'Destroy', category_path(category),
@@ -19,6 +23,24 @@
   <% end %>
 </table>
 
-<p> <%= link_to 'My Blog', controller: 'categories' %></p>
-<p> <%= link_to 'New Article', "http://localhost:3000/categories/new" %></p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Description</th>
+    <th>Level</th>
+  </tr>
+ 
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.description %></td>
+      <td><%= todo.id %></td>
+      <td><%= todo.level %></td>
+            
+    </tr>
+  <% end %>
+</table>
+
+<p> <%= link_to 'Home', controller: 'categories' %></p>
+<p> <%= link_to 'New Category', "http://localhost:3000/categories/new" %></p>
 <p> <%= link_to 'Back', "http://localhost:3000/categories" %></p>
+<p> <%= link_to 'New Todo',  "http://localhost:3000/todos/new" %></p>

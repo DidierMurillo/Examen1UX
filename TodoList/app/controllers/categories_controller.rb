@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def index
   	@categories = Category.all
+  	@todos =Todo.all
   end
 
  
@@ -10,18 +11,15 @@ class CategoriesController < ApplicationController
 end
  
 def edit
-  @article = Article.find(params[:id])
+  @category = Article.find(params[:id])
 end
  
 def create
   @category = Category.new(category_params)
- 
-  if @category.save
-    redirect_to "http://localhost:3000/categories"
-  else
-    render 'new'
-  end
+  @category.save
+  redirect_to "http://localhost:3000/categories"
 end
+
 
 def update
   @category = Category.find(params[:id])
@@ -54,4 +52,5 @@ end
   def category_params
     params.require(:category).permit(:name)
   end
+
 end

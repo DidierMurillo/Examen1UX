@@ -1,0 +1,22 @@
+<%= form_with scope: :todo,url: todos_path, local: true do |form| %>
+  <p>
+    <%= form.label :id %><br>
+    <%= form.text_field :id %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </p>
+
+  <p>
+    <%= form.label :level %><br>
+    <%= form.text_field :level %>
+  </p>
+ 
+  
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

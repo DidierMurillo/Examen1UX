@@ -1,0 +1,89 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+
+  background-image: url('data:image/jpeg;base64,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');
+  background-color: gray;
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+ h1{
+  color: white;
+  font-size: 30px;
+}
+
+ th{
+  background-color: rebeccapurple;
+  color: white;
+  padding: 15px;
+}
+
+td{
+  background-color: rebeccapurple;
+  color: black;
+  padding: 20px;
+}
+
+table,td,th {
+    border: 1px solid black;
+    text-align:center;
+}
+
+.main h1 {
+  font-size: 80px;
+  font-weight: 300;
+}
+
+.main p {
+  font-size: 30px;
+}
+
+
+
+/* Add a black background color to the top navigation */
+.NavBar {
+    background-color: #000066;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.NavBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.NavBar a:hover {
+    background-color: #333;
+    color: black;
+}
+
+
+.copyright {
+    color: white;
+    font-size: 20px;
+}
+
+
+p {
+  color:white;
+  font-size: 20px;
+}

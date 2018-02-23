@@ -1,0 +1,27 @@
+<h1>All my activities!</h1>
+ 
+<table>
+  <tr>
+     <th>ID</th>
+    <th>Description</th>
+    <th>Level</th>
+  </tr>
+ 
+  <% @todos.each do |category| %>
+    <tr>
+      <td><%= category.id %></td>
+      <td><%= category.description %></td>
+      <td><%= category.level %></td>
+      
+      <td><%= link_to 'Edit', "http://localhost:3000/categories/edit" %></td>
+      <td><%= link_to 'Destroy', category_path(category),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      
+    </tr>
+  <% end %>
+</table>
+
+<p> <%= link_to 'Home', controller: 'categories' %></p>
+<p> <%= link_to 'New Category', "http://localhost:3000/todos/new" %></p>
+<p> <%= link_to 'Back', "http://localhost:3000/categories" %></p>
